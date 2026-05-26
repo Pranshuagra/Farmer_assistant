@@ -1,0 +1,319 @@
+{
+  "Aphid": {
+    "description": "Aphids are small, soft-bodied insects, often green or black, found in colonies on leaves, stems, and heads. They suck sap, causing yellowing and stunted growth, and can transmit viruses.",
+    "cause": "Pest: Various species such as Rhopalosiphum padi and Sitobion avenae.",
+    "treatment": [
+      "Apply insecticides like imidacloprid or lambda-cyhalothrin when populations reach economic threshold levels.",
+      "Promote natural predators like ladybugs and lacewings."
+    ],
+    "prevention": [
+      "Plant resistant varieties.",
+      "Use reflective mulches to deter aphids.",
+      "Timely planting to avoid peak aphid activity."
+    ],
+    "fertilizer_recommendation": [
+      "Avoid excessive nitrogen application, as it promotes lush, tender growth that attracts aphids.",
+      "Maintain a balanced NPK ratio to ensure overall plant health."
+    ],
+    "soil_recommendation": [
+      "Healthy soil promotes vigorous plants that can better tolerate aphid feeding.",
+      "Follow standard recommendations for wheat: well-drained loamy soils with a pH of 6.0-7.0."
+    ]
+  },
+  "Black Rust": {
+    "description": "Black rust, or stem rust, appears as large, oval, dark reddish-brown pustules on stems and leaves. When rubbed, they leave a dark streak. The pustules rupture the plant's surface, giving it a ragged appearance.",
+    "cause": "Fungus Puccinia graminis f. sp. tritici.",
+    "treatment": [
+      "Apply foliar fungicides like tebuconazole or propiconazole at the first sign of disease.",
+      "Early detection and application are critical for effective control."
+    ],
+    "prevention": [
+      "Planting resistant wheat varieties is the most effective control method.",
+      "Eradicate alternate host plants like barberry bushes near wheat fields.",
+      "Early planting can help the crop mature before the disease becomes severe."
+    ],
+    "fertilizer_recommendation": [
+      "Avoid excessive nitrogen fertilization, especially late in the season.",
+      "Ensure adequate potassium levels, as this can enhance disease resistance."
+    ],
+    "soil_recommendation": [
+      "Follow standard best practices for wheat cultivation, including well-drained loamy soils.",
+      "Maintain a soil pH between 6.0 and 7.0."
+    ]
+  },
+  "Blast": {
+    "description": "Wheat blast causes bleaching of the heads from the point of infection upwards, while the stem below remains green. It can also cause eye-shaped lesions on the leaves.",
+    "cause": "Fungus Magnaporthe oryzae pathotype triticum (MoT).",
+    "treatment": [
+      "Application of fungicides containing triazoles at the head emergence stage can be effective.",
+      "Timing is crucial for control; applications after symptoms appear are often too late."
+    ],
+    "prevention": [
+      "Plant resistant or tolerant varieties.",
+      "Avoid late planting in blast-prone areas.",
+      "Treat seeds with a fungicide before planting."
+    ],
+    "fertilizer_recommendation": [
+      "Manage nitrogen to prevent excessive canopy growth, which can create a favorable microclimate for the fungus.",
+      "Silicon amendments have shown some benefit in increasing plant resistance."
+    ],
+    "soil_recommendation": [
+      "Ensure good field drainage to avoid waterlogged conditions, which can favor the disease.",
+      "Maintain soil pH between 6.0 and 7.0."
+    ]
+  },
+  "Brown Rust": {
+    "description": "Brown rust, also known as leaf rust, appears as small, round, or oval pustules (blisters) on the leaves, which are orange-brown in color and can be easily rubbed off.",
+    "cause": "Fungus Puccinia recondita.",
+    "treatment": [
+      "Apply fungicides such as propiconazole or azoxystrobin at early stages of infection.",
+      "Use a combination of protectant and systemic fungicides for better control."
+    ],
+    "prevention": [
+      "Plant resistant or tolerant wheat varieties.",
+      "Rotate crops to reduce the amount of fungal inoculum in the soil.",
+      "Ensure proper plant spacing to improve air circulation."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120-150 kg Nitrogen, 60-75 kg Phosphorus (P2O5), and 40-60 kg Potassium (K2O) per hectare.",
+      "A balanced fertilizer schedule helps maintain plant vigor and natural resistance."
+    ],
+    "soil_recommendation": [
+      "Wheat grows best in well-drained, fertile loamy soils.",
+      "Maintain soil pH between 6.0 and 7.0.",
+      "Avoid waterlogging as it can stress the plants and make them more susceptible to disease."
+    ]
+  },
+  "Common Root Rot": {
+    "description": "Symptoms include dark brown to black lesions on the sub-crown internode, crown, and roots. Above ground, plants may be stunted, yellow, and show poor vigor, leading to reduced tillering.",
+    "cause": "Fungus Bipolaris sorokiniana.",
+    "treatment": [
+      "Seed treatment with fungicides like mancozeb or carboxin is the primary method of control.",
+      "Foliar fungicides are not effective against this root disease."
+    ],
+    "prevention": [
+      "Use certified, high-quality, disease-free seed.",
+      "Practice crop rotation with non-cereal crops like legumes or canola.",
+      "Plant at a proper depth into moist soil to promote rapid seedling emergence."
+    ],
+    "fertilizer_recommendation": [
+      "Ensure adequate phosphorus levels, as it is crucial for healthy root development.",
+      "A balanced fertility program helps plants tolerate infection."
+    ],
+    "soil_recommendation": [
+      "Avoid soil compaction to allow for strong root growth.",
+      "Maintain good soil drainage and avoid planting in overly dry or hot soil."
+    ]
+  },
+  "Fusarium Head Blight": {
+    "description": "Also known as scab, this disease causes premature bleaching of one or more spikelets on the wheat head. Infected grains are often shriveled, lightweight, and have a chalky white or pinkish appearance.",
+    "cause": "Fungus Fusarium graminearum.",
+    "treatment": [
+      "Apply triazole-based fungicides (e.g., prothioconazole, tebuconazole) at early flowering (anthesis).",
+      "Avoid using strobilurin fungicides at flowering as they can increase mycotoxin levels."
+    ],
+    "prevention": [
+      "Plant moderately resistant wheat varieties.",
+      "Rotate crops, avoiding planting wheat after corn or other small grains.",
+      "Manage crop residue through tillage to reduce fungal inoculum."
+    ],
+    "fertilizer_recommendation": [
+      "Follow standard balanced fertilization practices to maintain a healthy crop.",
+      "No specific fertilizer adjustments are known to control Fusarium directly."
+    ],
+    "soil_recommendation": [
+      "Good soil drainage is important, as the fungus thrives in warm and moist conditions.",
+      "Maintain a soil pH between 6.0 and 7.0."
+    ]
+  },
+  "Healthy": {
+    "description": "Healthy wheat plants are characterized by strong, green stalks, vibrant leaves, and no visible signs of disease or pest damage.",
+    "cause": "No disease present.",
+    "treatment": [
+      "Maintain a balanced irrigation and fertilization schedule.",
+      "Regularly monitor the crop to ensure early detection of any issues."
+    ],
+    "prevention": [
+      "Use certified disease-free seeds.",
+      "Plant resistant varieties.",
+      "Practice good field sanitation and crop rotation."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120-150 kg Nitrogen, 60-75 kg Phosphorus (P2O5), and 40-60 kg Potassium (K2O) per hectare.",
+      "Split nitrogen application into two to three doses during key growth stages."
+    ],
+    "soil_recommendation": [
+      "Wheat thrives in well-drained loamy soils.",
+      "Maintain a soil pH between 6.0 and 7.0.",
+      "Regularly test soil to address any nutrient deficiencies."
+    ]
+  },
+  "Leaf Blight": {
+    "description": "Alternaria leaf blight appears as small, oval, yellowish lesions on lower leaves. These spots enlarge, becoming irregular with dark brown to grey centers and a distinct yellow margin. Severe infection causes leaves to wither.",
+    "cause": "Fungus Alternaria triticina.",
+    "treatment": [
+      "Apply foliar fungicides such as mancozeb or propiconazole at the onset of the disease.",
+      "Repeat applications may be necessary depending on disease severity and weather conditions."
+    ],
+    "prevention": [
+      "Use disease-free, certified seeds.",
+      "Practice crop rotation with non-host crops.",
+      "Remove and destroy infected crop debris after harvest to reduce inoculum."
+    ],
+    "fertilizer_recommendation": [
+      "A balanced nutrition program, especially with adequate potassium (K), can help reduce disease severity.",
+      "Avoid excessive nitrogen, which can lead to a dense canopy that favors fungal growth."
+    ],
+    "soil_recommendation": [
+      "Ensure well-drained soils to reduce humidity and periods of leaf wetness.",
+      "Maintain optimal soil pH (6.0-7.0) for vigorous plant growth."
+    ]
+  },
+  "Mildew": {
+    "description": "Powdery mildew appears as white to grayish, cottony patches on the leaves, stems, and heads of wheat plants. The patches may turn yellow or brown over time.",
+    "cause": "Fungus Blumeria graminis.",
+    "treatment": [
+      "Apply fungicides such as tebuconazole or azoxystrobin at the first sign of symptoms.",
+      "Ensure thorough coverage of the plant, including the lower leaves."
+    ],
+    "prevention": [
+      "Plant mildew-resistant wheat varieties.",
+      "Ensure proper plant spacing to improve air circulation within the canopy.",
+      "Avoid excessive nitrogen fertilization, which can make plants more susceptible."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120-150 kg Nitrogen, 60-75 kg Phosphorus (P2O5), and 40-60 kg Potassium (K2O) per hectare.",
+      "A balanced nutrient profile, especially adequate potassium, can help reduce susceptibility."
+    ],
+    "soil_recommendation": [
+      "Wheat grows best in well-drained loamy soils.",
+      "Maintain a soil pH between 6.0 and 7.0."
+    ]
+  },
+  "Mite": {
+    "description": "The wheat curl mite is microscopic and not visible to the naked eye. Damage is primarily caused by the viruses it transmits, such as Wheat Streak Mosaic Virus, leading to yellow streaks on leaves, severe stunting, and reduced yield.",
+    "cause": "Pest: Wheat Curl Mite (Aceria tosichella) transmitting viruses.",
+    "treatment": [
+      "There is no effective chemical treatment (acaricide) for controlling mites in the field.",
+      "Management focuses entirely on preventing virus transmission."
+    ],
+    "prevention": [
+      "The most critical step is to destroy the 'green bridge' by eliminating all volunteer wheat and grassy weeds at least two weeks before planting.",
+      "Plant certified, virus-free seed.",
+      "Avoid early planting in the fall to miss peak mite activity."
+    ],
+    "fertilizer_recommendation": [
+      "A balanced fertility program helps plants better tolerate stress, but it will not prevent infection.",
+      "Standard NPK recommendations for wheat apply."
+    ],
+    "soil_recommendation": [
+      "Standard soil management for wheat is recommended to promote a healthy crop stand.",
+      "Maintain a soil pH between 6.0 and 7.0."
+    ]
+  },
+  "Septoria": {
+    "description": "Septoria leaf blotch appears as irregular, lens-shaped lesions on the leaves, which are initially yellowish and later turn reddish-brown with a gray or tan center. Small, black, pinpoint-sized dots (pycnidia) are visible within the lesions.",
+    "cause": "Fungus Zymoseptoria tritici.",
+    "treatment": [
+      "Apply foliar fungicides from the triazole or SDHI groups to protect the flag leaf.",
+      "Proper timing of application is crucial for effective management."
+    ],
+    "prevention": [
+      "Plant wheat varieties with genetic resistance to Septoria.",
+      "Practice crop rotation with non-host crops.",
+      "Manage crop residue by incorporating it into the soil through tillage."
+    ],
+    "fertilizer_recommendation": [
+      "Avoid excessive nitrogen, which creates a dense canopy that holds humidity and favors the disease.",
+      "Ensure a balanced nutrient supply for overall plant health."
+    ],
+    "soil_recommendation": [
+      "Good soil drainage helps to reduce periods of leaf wetness and lower disease pressure.",
+      "Maintain a soil pH between 6.0 and 7.0."
+    ]
+  },
+  "Smut": {
+    "description": "Loose smut is characterized by the replacement of the entire wheat head with a mass of black, powdery spores. These spores are easily dispersed by wind, leaving only the bare central stalk (rachis).",
+    "cause": "Fungus Ustilago tritici.",
+    "treatment": [
+      "Foliar fungicides are ineffective. The only effective treatment is the use of systemic fungicides applied directly to the seed before planting."
+    ],
+    "prevention": [
+      "Use certified, disease-free seed from a reputable source.",
+      "Treat seeds with a systemic fungicide like tebuconazole or carboxin.",
+      "Remove and destroy smutted heads from the field before spores spread (only practical for small areas)."
+    ],
+    "fertilizer_recommendation": [
+      "Fertilizer practices do not directly influence this seed-borne disease.",
+      "Follow standard recommendations to ensure a healthy crop."
+    ],
+    "soil_recommendation": [
+      "Soil conditions do not directly affect the incidence of loose smut.",
+      "Maintain optimal soil conditions for wheat growth."
+    ]
+  },
+  "Stem fly": {
+    "description": "The larva (maggot) of the wheat stem fly bores into the stem. In young plants, this causes the central shoot to die, a condition known as 'deadheart'. In older plants, it can cause white, unfilled heads and stem breakage.",
+    "cause": "Pest: Wheat Stem Fly (Meromyza americana).",
+    "treatment": [
+      "Chemical control with insecticides is generally not effective or economical because the larvae are protected inside the stem.",
+      "Control strategies focus on cultural practices and prevention."
+    ],
+    "prevention": [
+      "Adjust planting dates to avoid peak fly activity for egg-laying.",
+      "Rotate crops with non-grasses like legumes or oilseeds.",
+      "Destroy volunteer wheat and grassy weeds that can host the fly."
+    ],
+    "fertilizer_recommendation": [
+      "A well-fertilized, vigorous crop can better tolerate and sometimes outgrow minor infestations.",
+      "Follow standard NPK guidelines for wheat."
+    ],
+    "soil_recommendation": [
+      "Standard soil management practices for wheat apply.",
+      "Good soil health promotes a stronger crop that is more resilient to pest damage."
+    ]
+  },
+  "Tan spot": {
+    "description": "Tan spot symptoms appear on leaves as small, tan to brown, diamond-shaped lesions surrounded by a distinct yellow halo. A small, dark brown spot often develops in the center of the lesion.",
+    "cause": "Fungus Pyrenophora tritici-repentis.",
+    "treatment": [
+      "Apply foliar fungicides from the triazole or strobilurin families.",
+      "Application is most effective when done to protect the upper leaves, especially the flag leaf."
+    ],
+    "prevention": [
+      "Plant resistant wheat varieties.",
+      "Practice crop rotation with broadleaf crops, as the fungus survives on wheat residue.",
+      "Tillage can help bury and decompose infected residue, reducing the source of inoculum."
+    ],
+    "fertilizer_recommendation": [
+      "A balanced fertility program is recommended. Ensure adequate potassium, which can improve disease resistance.",
+      "Avoid over-application of nitrogen."
+    ],
+    "soil_recommendation": [
+      "Well-drained soils are preferred for wheat cultivation.",
+      "Maintain a soil pH between 6.0 and 7.0."
+    ]
+  },
+  "Yellow Rust": {
+    "description": "Yellow rust, also known as stripe rust, is characterized by yellow-orange pustules that form stripes on the leaves. It can cause significant yield loss if not managed.",
+    "cause": "Fungus Puccinia striiformis.",
+    "treatment": [
+      "Apply fungicides such as propiconazole, azoxystrobin, or tebuconazole at the first sign of stripes.",
+      "Multiple applications may be needed in high-risk conditions."
+    ],
+    "prevention": [
+      "Plant resistant wheat varieties.",
+      "Remove and destroy volunteer wheat plants and infected crop residue.",
+      "Use proper plant spacing and a balanced fertilizer program."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120-150 kg Nitrogen, 60-75 kg Phosphorus (P2O5), and 40-60 kg Potassium (K2O) per hectare.",
+      "Avoid excessive nitrogen, which can increase susceptibility to the disease."
+    ],
+    "soil_recommendation": [
+      "Wheat grows best in well-drained loamy soils.",
+      "Maintain a soil pH between 6.0 and 7.0.",
+      "Good soil health and drainage are important for a robust plant."
+    ]
+  }
+}

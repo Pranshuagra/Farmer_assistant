@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Forecast App</title>
+    <meta name="description" content="Check real-time weather for any Indian city using TimeAndDate.com." />
+    <meta name="keywords" content="Weather, Forecast, India, City Weather" />
+    <meta name="author" content="Agrim Mishra" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        :root {
+            --color-bg: #ffffff;
+            --color-primary: #111827;
+            --color-secondary: #6b7280;
+            --color-accent: #22c55e;
+            --color-shadow: rgba(0, 0, 0, 0.05);
+            --radius: 0.75rem;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: var(--color-bg);
+            color: var(--color-secondary);
+        }
+
+        header {
+            background: var(--color-bg);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--color-secondary);
+            margin-bottom: 2rem;
+        }
+
+        input[type="text"] {
+            padding: 0.75rem 1rem;
+            font-size: 1rem;
+            width: 280px;
+            max-width: 100%;
+            border-radius: var(--radius);
+            border: 1px solid #d1d5db;
+            margin-bottom: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: var(--color-accent);
+            outline: none;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #fff;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--radius);
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px var(--color-shadow);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-accent);
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--color-secondary);
+            border-top: 1px solid #e5e7eb;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">🌤 Weather Forecast App</div>
+    </header>
+
+    <main>
+        <h1>Check Weather by City</h1>
+        <p>Enter an Indian city name to get redirected to its live weather forecast.</p>
+
+        <input type="text" id="weather-city" placeholder="e.g., Mumbai, New Delhi, Lucknow" />
+        <br>
+        <button class="btn-primary" onclick="goToWeather()">Check Weather</button>
+    </main>
+
+    <footer>
+        &copy; 2025 Weather Forecast App. All rights reserved.
+    </footer>
+
+    <script>
+        function goToWeather() {
+            const city = document.getElementById('weather-city').value.trim().toLowerCase();
+            if (city === '') {
+                alert('Please enter a city name.');
+                return;
+            }
+
+            const formattedCity = city.replace(/\s+/g, '-'); // replace spaces with hyphens
+            const url = `https://www.timeanddate.com/weather/india/${formattedCity}`;
+            window.open(url, '_blank'); // open in new tab
+        }
+    </script>
+</body>
+
+</html>

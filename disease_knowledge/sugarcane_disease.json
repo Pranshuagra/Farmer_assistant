@@ -1,0 +1,136 @@
+{
+  "BacterialBlights": {
+    "description": "Bacterial blight, commonly known as Gummosis in sugarcane, appears as yellowish stripes on leaves. When infected stalks are cut, a gummy, yellowish bacterial ooze emerges. This can lead to internal cavities and rot.",
+    "cause": "Bacterium Xanthomonas axonopodis pv. vasculorum.",
+    "treatment": [
+      "There is no effective chemical treatment for infected plants.",
+      "Remove and destroy infected plants (roguing) to prevent spread.",
+      "Regularly disinfect cutting knives and farm equipment, especially between fields."
+    ],
+    "prevention": [
+      "Use certified, disease-free seed canes (setts) for planting.",
+      "Plant resistant sugarcane varieties.",
+      "Treat setts with hot water (around 50°C for 2 hours) before planting to kill bacteria."
+    ],
+    "fertilizer_recommendation": [
+      "Apply a balanced NPK ratio. Avoid excessive nitrogen fertilizer, which can increase susceptibility.",
+      "Ensure adequate potassium levels to improve plant resistance."
+    ],
+    "soil_recommendation": [
+      "Ensure the field has well-drained soil, as waterlogging favors the disease.",
+      "Maintain a soil pH between 6.5 and 7.5 for optimal sugarcane growth."
+    ]
+  },
+  "Healthy": {
+    "description": "A healthy sugarcane crop is characterized by tall, thick, and vigorous stalks (canes) with a full canopy of vibrant green leaves. The stalks are solid and heavy, with no external or internal signs of discoloration, spots, or rot.",
+    "cause": "Optimal growing conditions with no significant disease or pest pressure.",
+    "treatment": [
+      "Maintain good agricultural practices, including proper irrigation and nutrient management.",
+      "Regularly monitor the crop to quickly identify and manage any emerging issues."
+    ],
+    "prevention": [
+      "Always start with high-quality, disease-free seed canes from a reliable source.",
+      "Select varieties that are resistant to common diseases in the region.",
+      "Practice crop rotation and maintain good field sanitation."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 250-300 kg Nitrogen, 80-100 kg Phosphorus (P2O5), and 120-150 kg Potassium (K2O) per hectare.",
+      "Nitrogen should be applied in split doses to match crop growth stages."
+    ],
+    "soil_recommendation": [
+      "Deep, well-drained loamy soils with good organic matter content are ideal.",
+      "Maintain a soil pH between 6.5 and 7.5.",
+      "Avoid soil compaction to allow for deep root development."
+    ]
+  },
+  "Mosaic": {
+    "description": "Sugarcane Mosaic is a viral disease that appears as irregular, contrasting light green to yellowish stripes or patches on the leaves, creating a 'mosaic' pattern. It can lead to stunting, reduced tillering, and lower cane yield.",
+    "cause": "Sugarcane Mosaic Virus (SCMV), which is primarily transmitted by several species of aphids.",
+    "treatment": [
+      "There is no cure for virus-infected plants.",
+      "Control focuses on removing infected plants (roguing) and managing the aphid vectors.",
+      "Insecticide sprays for aphids can reduce spread but are often not completely effective."
+    ],
+    "prevention": [
+      "Using disease-free planting material is the most critical step. Source setts from a certified healthy nursery.",
+      "Plant mosaic-resistant sugarcane varieties.",
+      "Control grassy weeds in and around the field, as they can host the virus and aphids."
+    ],
+    "fertilizer_recommendation": [
+      "A balanced nutrient supply helps plants better tolerate the stress from the virus but will not cure the disease.",
+      "Follow standard fertilizer recommendations for a healthy crop."
+    ],
+    "soil_recommendation": [
+      "Good soil management practices that promote a vigorous crop can help mitigate yield losses.",
+      "Maintain optimal soil pH and fertility."
+    ]
+  },
+  "RedRot": {
+    "description": "Red Rot is a destructive disease characterized by the internal reddening of the sugarcane stalk with intermittent white patches and a sour smell.",
+    "cause": "Fungus Colletotrichum falcatum.",
+    "treatment": [
+      "Destroy infected clumps by uprooting and burning.",
+      "Do not use stalks from infected fields for planting.",
+      "Apply fungicides containing mancozeb or carbendazim."
+    ],
+    "prevention": [
+      "Use disease-free seed cane for planting.",
+      "Plant resistant or tolerant sugarcane varieties.",
+      "Practice crop rotation to reduce fungal inoculum."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 60-80 kg Phosphorus (P2O5), and 80-100 kg Potassium (K2O) per hectare.",
+      "Split nitrogen into 2-3 applications."
+    ],
+    "soil_recommendation": [
+      "Best grown in well-drained loamy soils.",
+      "Maintain soil pH between 6.5 and 7.5.",
+      "Avoid waterlogging to ensure healthy roots."
+    ]
+  },
+  "Rust": {
+    "description": "Red Rust appears as reddish-brown, elongated spots on the underside of sugarcane leaves that may turn powdery when touched.",
+    "cause": "Fungus Puccinia kuehnii.",
+    "treatment": [
+      "Apply fungicides like triadimefon or mancozeb at the first sign of symptoms.",
+      "Fungicides are most effective when applied early."
+    ],
+    "prevention": [
+      "Plant rust-resistant sugarcane varieties.",
+      "Ensure proper plant spacing for good air circulation.",
+      "Avoid excessive nitrogen fertilization."
+    ],
+    "fertilizer_recommendation": [
+      "Maintain a balanced fertilizer schedule.",
+      "Typical recommendation is 150-200 kg Nitrogen, 60-80 kg Phosphorus (P2O5), and 80-100 kg Potassium (K2O) per hectare."
+    ],
+    "soil_recommendation": [
+      "Suited for well-drained loamy soils.",
+      "Avoid fields with a history of rust infections.",
+      "Manage soil moisture to prevent overly humid conditions."
+    ]
+  },
+  
+  "Yellow spot": {
+    "description": "Yellow Rust causes long, yellowish to orange-colored lesions or stripes on the leaves, which produce powdery spores that can be easily rubbed off.",
+    "cause": "Fungus Puccinia melanocephala.",
+    "treatment": [
+      "Spray fungicides such as propiconazole or azoxystrobin as soon as the disease is detected.",
+      "Repeat applications may be necessary in severe cases."
+    ],
+    "prevention": [
+      "Plant sugarcane varieties that are resistant to yellow rust.",
+      "Remove and destroy infected plant debris.",
+      "Promote good air circulation through proper row spacing."
+    ],
+    "fertilizer_recommendation": [
+      "A balanced fertilizer regime is crucial for plant health.",
+      "Typical recommendation is 150-200 kg Nitrogen, 60-80 kg Phosphorus (P2O5), and 80-100 kg Potassium (K2O) per hectare."
+    ],
+    "soil_recommendation": [
+      "Best grown in well-aerated and well-drained soils.",
+      "Maintain a soil pH of 6.5 to 7.5.",
+      "Ensure good drainage to prevent water stagnation."
+    ]
+  }
+}

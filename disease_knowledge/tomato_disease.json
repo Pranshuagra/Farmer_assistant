@@ -1,0 +1,170 @@
+{
+  "bacterial spot": {
+    "description": "Bacterial spot appears as small, dark, water-soaked spots on leaves and fruit, which may later become scabby.",
+    "cause": "Bacterial pathogens such as Xanthomonas spp.",
+    "treatment": [
+      "Use copper-based bactericides.",
+      "Prune and remove infected plant parts to prevent spread."
+    ],
+    "prevention": [
+      "Use certified disease-free seeds or transplants.",
+      "Avoid overhead irrigation to reduce leaf wetness.",
+      "Practice crop rotation."
+    ],
+    "fertilizer_recommendation": [
+      "Maintain a balanced fertilizer program to support plant health and resilience.",
+      "Typical application: 150-200 kg Nitrogen, 80-100 kg Phosphorus (P2O5), and 200-250 kg Potassium (K2O) per hectare."
+    ],
+    "soil_recommendation": [
+      "Prefers well-drained, sandy loam soils.",
+      "Maintain soil pH between 6.0 and 6.8."
+    ]
+  },
+  "early blight": {
+    "description": "Early blight is characterized by dark brown spots with concentric rings on lower leaves, leading to premature defoliation.",
+    "cause": "Fungus Alternaria solani.",
+    "treatment": [
+      "Apply fungicides such as mancozeb, chlorothalonil, or azoxystrobin.",
+      "Remove severely infected leaves and plant debris."
+    ],
+    "prevention": [
+      "Plant resistant tomato varieties.",
+      "Ensure good air circulation and avoid overhead watering.",
+      "Rotate crops to reduce fungal inoculum."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 80-100 kg Phosphorus, and 200-250 kg Potassium per hectare.",
+      "Adequate potassium can enhance disease resistance."
+    ],
+    "soil_recommendation": [
+      "Best grown in well-drained, fertile loamy soils.",
+      "Maintain soil pH between 6.0 and 6.8."
+    ]
+  },
+  "healthy": {
+    "description": "A healthy tomato plant has vibrant green leaves, strong stems, and is free of any disease symptoms or pests.",
+    "cause": "No disease present.",
+    "treatment": [
+      "Follow a regular watering and fertilization schedule.",
+      "Regularly monitor plants for early signs of disease or pests."
+    ],
+    "prevention": [
+      "Use certified seeds and resistant varieties.",
+      "Maintain good field sanitation.",
+      "Practice crop rotation to prevent soil-borne diseases."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 80-100 kg Phosphorus, and 200-250 kg Potassium per hectare.",
+      "Split nitrogen applications for optimal growth."
+    ],
+    "soil_recommendation": [
+      "Well-drained, fertile loam soil is ideal.",
+      "Maintain soil pH between 6.0 and 6.8."
+    ]
+  },
+  "late blight": {
+    "description": "Late blight causes large, irregular, water-soaked spots on leaves and stems that quickly turn black. Fruit develop dark, sunken lesions.",
+    "cause": "Oomycete pathogen Phytophthora infestans.",
+    "treatment": [
+      "Spray systemic fungicides like metalaxyl or cymoxanil combined with protectants like mancozeb.",
+      "Destroy heavily infected plants to limit disease spread."
+    ],
+    "prevention": [
+      "Plant resistant varieties.",
+      "Ensure proper plant spacing for good air circulation.",
+      "Avoid prolonged leaf wetness by managing irrigation."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 80-100 kg Phosphorus, and 200-250 kg Potassium per hectare.",
+      "Higher potassium levels can improve tolerance to late blight."
+    ],
+    "soil_recommendation": [
+      "Well-drained loamy soils are best.",
+      "Keep soil pH between 6.0 and 6.8.",
+      "Avoid excess irrigation to reduce humidity."
+    ]
+  },
+  "leaf mold": {
+    "description": "Leaf mold presents as pale green or yellow spots on the top leaf surface with a velvety, olive-green to brown mold on the underside.",
+    "cause": "Fungus Passalora fulva.",
+    "treatment": [
+      "Use fungicides such as chlorothalonil or azoxystrobin.",
+      "Increase air circulation and reduce humidity in the growing area."
+    ],
+    "prevention": [
+      "Plant resistant varieties.",
+      "Ensure proper ventilation, especially in greenhouses.",
+      "Avoid overhead watering."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 80-100 kg Phosphorus, and 200-250 kg Potassium per hectare."
+    ],
+    "soil_recommendation": [
+      "Requires well-drained soil.",
+      "Maintain soil pH between 6.0 and 6.8."
+    ]
+  },
+  "mosaic virus": {
+    "description": "This virus causes a mottled, mosaic-like pattern of light and dark green on leaves, leading to stunted growth and reduced fruit yield.",
+    "cause": "Tomato mosaic virus (ToMV).",
+    "treatment": [
+      "No chemical cure is available.",
+      "Immediately remove and destroy infected plants."
+    ],
+    "prevention": [
+      "Use certified disease-free seeds and transplants.",
+      "Avoid using tobacco products around the plants, as the virus can be transmitted by smokers.",
+      "Disinfect tools and hands regularly."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 80-100 kg Phosphorus, and 200-250 kg Potassium per hectare.",
+      "A balanced diet helps plants cope with viral stress."
+    ],
+    "soil_recommendation": [
+      "Grows best in well-drained, fertile soil.",
+      "Maintain soil pH between 6.0 and 6.8."
+    ]
+  },
+  "septoria spot": {
+    "description": "Septoria leaf spot causes small, circular spots with dark borders and gray or tan centers, often with tiny black specks in the middle.",
+    "cause": "Fungus Septoria lycopersici.",
+    "treatment": [
+      "Apply fungicides such as chlorothalonil or mancozeb.",
+      "Remove and destroy affected lower leaves."
+    ],
+    "prevention": [
+      "Practice good field sanitation by removing plant debris.",
+      "Avoid overhead irrigation.",
+      "Rotate crops to a non-host plant."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 80-100 kg Phosphorus, and 200-250 kg Potassium per hectare."
+    ],
+    "soil_recommendation": [
+      "Grows best in well-drained soil.",
+      "Maintain soil pH between 6.0 and 6.8."
+    ]
+  },
+  
+  "yellow leafCurl": {
+    "description": "Leaves curl upward, become crinkled and leathery. Plants are severely stunted, and flowers may drop without producing fruit.",
+    "cause": "Tomato yellow leaf curl virus (TYLCV), transmitted by whiteflies.",
+    "treatment": [
+      "No chemical cure exists.",
+      "Remove and destroy infected plants immediately."
+    ],
+    "prevention": [
+      "Use resistant or tolerant tomato varieties.",
+      "Control whitefly populations using insecticides or sticky traps.",
+      "Use insect-proof nets in greenhouses."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150-200 kg Nitrogen, 80-100 kg Phosphorus, and 200-250 kg Potassium per hectare.",
+      "A balanced fertilizer program supports plant growth."
+    ],
+    "soil_recommendation": [
+      "Prefers well-drained, fertile soil.",
+      "Maintain soil pH between 6.0 and 6.8."
+    ]
+  }
+}

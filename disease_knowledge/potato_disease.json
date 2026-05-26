@@ -1,0 +1,68 @@
+{
+  "early blight": {
+    "description": "Early blight appears as small brown spots with concentric rings on older leaves, causing premature defoliation.",
+    "cause": "Fungus Alternaria solani.",
+    "treatment": [
+      "Spray fungicides like mancozeb, chlorothalonil, or azoxystrobin at early symptoms.",
+      "Remove severely infected leaves."
+    ],
+    "prevention": [
+      "Plant resistant potato varieties.",
+      "Avoid overhead irrigation and ensure good field sanitation.",
+      "Rotate crops to reduce inoculum."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150–180 kg Nitrogen, 80–100 kg Phosphorus, and 120–150 kg Potassium per hectare.",
+      "Use adequate potassium for disease resistance."
+    ],
+    "soil_recommendation": [
+      "Prefer sandy loam to loam soils with good drainage.",
+      "Maintain soil pH 5.5–7.5.",
+      "Avoid soil compaction to reduce stress."
+    ]
+  },
+  "healthy": {
+    "description": "Healthy potato plants have green leaves, strong stems, and produce tubers without disease symptoms.",
+    "cause": "No disease present.",
+    "treatment": [
+      "Maintain balanced irrigation and fertilization.",
+      "Conduct regular monitoring for early disease detection."
+    ],
+    "prevention": [
+      "Use certified seeds and resistant varieties.",
+      "Rotate crops and maintain field hygiene.",
+      "Apply preventive fungicides if nearby fields show infection."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150–180 kg Nitrogen, 80–100 kg Phosphorus, and 120–150 kg Potassium per hectare.",
+      "Split nitrogen applications during growth stages."
+    ],
+    "soil_recommendation": [
+      "Well-drained sandy loam soil.",
+      "Soil pH between 5.5 and 7.0.",
+      "Maintain organic matter for better soil health."
+    ]
+  },
+  "late blight": {
+    "description": "Late blight causes water-soaked lesions on leaves and stems, turning black. Tubers develop dark, sunken, firm rot.",
+    "cause": "Oomycete pathogen Phytophthora infestans.",
+    "treatment": [
+      "Spray systemic fungicides (metalaxyl, cymoxanil, dimethomorph) combined with protectants (mancozeb, chlorothalonil).",
+      "Destroy heavily infected plants to limit spread."
+    ],
+    "prevention": [
+      "Use resistant potato varieties.",
+      "Ensure proper plant spacing for good aeration.",
+      "Avoid prolonged leaf wetness by managing irrigation."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 150–200 kg Nitrogen, 80–100 kg Phosphorus, and 120–150 kg Potassium per hectare.",
+      "Higher potassium improves tolerance to late blight."
+    ],
+    "soil_recommendation": [
+      "Well-drained loamy soils are best.",
+      "Keep soil pH between 5.5 and 7.0.",
+      "Avoid excess irrigation to reduce humidity."
+    ]
+  }
+}

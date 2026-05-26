@@ -1,0 +1,88 @@
+{
+  "common rust": {
+    "description": "Common rust of corn appears as small, round to elongate reddish-brown pustules on both leaf surfaces. These pustules often appear in bands on the leaves.",
+    "cause": "Fungus Puccinia sorghi.",
+    "treatment": [
+      "Apply fungicides such as mancozeb or azoxystrobin when rust first appears, especially on susceptible hybrids.",
+      "Spray systemic fungicides (e.g., tebuconazole, propiconazole) if the infection is severe and conditions favor its spread."
+    ],
+    "prevention": [
+      "Plant corn hybrids that are resistant or tolerant to common rust.",
+      "Rotate crops to reduce the amount of fungal inoculum in the soil.",
+      "Ensure proper plant spacing to improve air circulation within the crop canopy."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120–150 kg Nitrogen, 60–75 kg Phosphorus (P2O5), and 40–60 kg Potassium (K2O) per hectare.",
+      "Split the nitrogen application into 2–3 doses (at planting, knee-high, and tasseling) to provide consistent nutrition without making the plant overly succulent."
+    ],
+    "soil_recommendation": [
+      "Best grown in well-drained loamy soils.",
+      "Maintain soil pH between 5.8 and 7.0.",
+      "Avoid waterlogging, which can weaken the plant and make it more susceptible to disease."
+    ]
+  },
+  "cercospora leaf spot gray": {
+    "description": "Gray leaf spot is characterized by small, rectangular or long, narrow lesions on the leaves that are gray-tan in color. These lesions often appear in humid conditions.",
+    "cause": "Fungus Cercospora zeae-maydis.",
+    "treatment": [
+      "Apply fungicides containing strobilurins (e.g., azoxystrobin) or triazoles (e.g., propiconazole) when lesions first appear on the lower leaves.",
+      "Follow a regular spray schedule if conditions remain favorable for the disease."
+    ],
+    "prevention": [
+      "Plant resistant corn hybrids.",
+      "Practice crop rotation with non-host crops (e.g., soybeans, wheat).",
+      "Plow under infected corn residue after harvest to reduce the fungal inoculum for the next season."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120–150 kg Nitrogen, 60–75 kg Phosphorus (P2O5), and 40–60 kg Potassium (K2O) per hectare.",
+      "Proper fertilization strengthens the plant's natural defense mechanisms."
+    ],
+    "soil_recommendation": [
+      "Thrives in well-drained, fertile loamy soils.",
+      "Maintain a soil pH between 5.8 and 7.0."
+    ]
+  },
+  "healthy": {
+    "description": "A healthy corn plant has strong, vibrant green leaves and stalks, is free from any visible lesions, spots, or signs of pests, and shows robust growth.",
+    "cause": "No disease present.",
+    "treatment": [
+      "Maintain a consistent irrigation and fertilization schedule.",
+      "Regularly scout the field to detect any disease or pest issues early."
+    ],
+    "prevention": [
+      "Use certified disease-free seeds.",
+      "Plant corn hybrids with high disease resistance ratings.",
+      "Implement good field sanitation and crop rotation practices."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120–150 kg Nitrogen, 60–75 kg Phosphorus (P2O5), and 40–60 kg Potassium (K2O) per hectare.",
+      "Split nitrogen application to match the corn's growth stages."
+    ],
+    "soil_recommendation": [
+      "Grows best in well-drained, fertile loamy soils.",
+      "Maintain soil pH between 5.8 and 7.0."
+    ]
+  },
+  "northern leaf blight": {
+    "description": "Northern leaf blight causes long, cigar-shaped, gray-green or tan lesions on the leaves, starting on the lower leaves and moving up the plant.",
+    "cause": "Fungus Exserohilum turcicum.",
+    "treatment": [
+      "Apply fungicides such as mancozeb, propiconazole, or azoxystrobin when symptoms first appear.",
+      "Fungicide application is most critical to protect the ear leaf and leaves above it during the reproductive stages."
+    ],
+    "prevention": [
+      "Plant corn hybrids with a high resistance rating to northern leaf blight.",
+      "Practice crop rotation.",
+      "Use tillage to bury corn residue from previous seasons, as the fungus overwinters in the residue."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 120–150 kg Nitrogen, 60–75 kg Phosphorus (P2O5), and 40–60 kg Potassium (K2O) per hectare.",
+      "Adequate fertilization, especially potassium, can help the plant better tolerate the disease."
+    ],
+    "soil_recommendation": [
+      "Thrives in well-drained loamy soils.",
+      "Maintain soil pH between 5.8 and 7.0.",
+      "Avoid fields with a history of the disease if possible."
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Market Prices in India</title>
+ <style>
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#crop-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.crop-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.crop-btn:hover {
+  background-color: #bdbdbd;
+}
+
+.filter select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+ </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Crop Market Prices in India</h1>
+    <div class="controls">
+      <div id="crop-buttons"></div>
+      <div class="filter">
+        <label for="state-select">Filter by State:</label>
+        <select id="state-select">
+          <option value="All">All</option>
+        </select>
+      </div>
+    </div>
+    <table id="price-table">
+      <thead>
+        <tr>
+          <th>Crop</th>
+          <th>State</th>
+          <th>Market Price (₹/quintal)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <script>const cropData = [
+  { crop: "Wheat", state: "Punjab", price: 2300 },
+  { crop: "Wheat", state: "Uttar Pradesh", price: 2100 },
+  { crop: "Wheat", state: "Haryana", price: 2200 },
+  { crop: "Rice", state: "Bihar", price: 1800 },
+  { crop: "Rice", state: "West Bengal", price: 1850 },
+  { crop: "Rice", state: "Maharashtra", price: 2000 },
+  { crop: "Maize", state: "Maharashtra", price: 1900 },
+  { crop: "Maize", state: "Karnataka", price: 1950 },
+  { crop: "Sugarcane", state: "Uttar Pradesh", price: 3400 },
+  { crop: "Sugarcane", state: "Tamil Nadu", price: 3450 },
+  { crop: "Cotton", state: "Punjab", price: 4500 },
+  { crop: "Cotton", state: "Maharashtra", price: 4700 },
+  { crop: "Cotton", state: "Gujarat", price: 4600 }
+];
+
+const allCrops = [...new Set(cropData.map(d => d.crop))];
+const allStates = ["All", ...new Set(cropData.map(d => d.state))];
+
+const cropButtons = document.getElementById("crop-buttons");
+const stateSelect = document.getElementById("state-select");
+const tableBody = document.querySelector("#price-table tbody");
+
+let selectedCrop = null;
+let selectedState = "All";
+
+allCrops.forEach(crop => {
+  const btn = document.createElement("button");
+  btn.innerText = crop;
+  btn.className = "crop-btn";
+  btn.onclick = () => {
+    selectedCrop = crop;
+    renderTable();
+  };
+  cropButtons.appendChild(btn);
+});
+
+allStates.forEach(state => {
+  const opt = document.createElement("option");
+  opt.value = state;
+  opt.innerText = state;
+  stateSelect.appendChild(opt);
+});
+
+stateSelect.onchange = (e) => {
+  selectedState = e.target.value;
+  renderTable();
+};
+
+function renderTable() {
+  const filtered = cropData.filter(d =>
+    (!selectedCrop || d.crop === selectedCrop) &&
+    (selectedState === "All" || d.state === selectedState)
+  );
+
+  tableBody.innerHTML = "";
+  if (filtered.length === 0) {
+    tableBody.innerHTML = "<tr><td colspan='3'>No data available</td></tr>";
+    return;
+  }
+
+  filtered.forEach(d => {
+    const row = `<tr>
+      <td>${d.crop}</td>
+      <td>${d.state}</td>
+      <td>₹ ${d.price}</td>
+    </tr>`;
+    tableBody.innerHTML += row;
+  });
+}
+
+renderTable();</script>
+</body>
+</html>

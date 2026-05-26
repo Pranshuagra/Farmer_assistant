@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop Recommendation System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f7f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+        .container {
+            width: 100%;
+            max-width: 700px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2d6a4f;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #40916c;
+            margin-top: 30px;
+            font-size: 20px;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 6px;
+        }
+        form {
+            margin-top: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+            color: #1b4332;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: #2d6a4f;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #1b4332;
+        }
+        .result {
+            margin-top: 25px;
+            padding: 15px;
+            background: #e9f5ec;
+            border-left: 5px solid #2d6a4f;
+            border-radius: 8px;
+            color: #081c15;
+            font-size: 16px;
+        }
+        .section {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Crop Recommendation System</h1>
+
+        <!-- Prediction Form -->
+        <div class="section">
+            <h2>🌾 Crop Prediction</h2>
+            <form method="POST" action="/crop/predict">
+                <label for="N">Nitrogen (N):</label>
+                <input type="text" name="N" required>
+
+                <label for="P">Phosphorous (P):</label>
+                <input type="text" name="P" required>
+
+                <label for="K">Potassium (K):</label>
+                <input type="text" name="K" required>
+
+                <label for="temperature">Temperature (°C):</label>
+                <input type="text" name="temperature" required>
+
+                <label for="humidity">Humidity (%):</label>
+                <input type="text" name="humidity" required>
+
+                <label for="ph">Soil pH:</label>
+                <input type="text" name="ph" required>
+
+                <label for="rainfall">Rainfall (mm):</label>
+                <input type="text" name="rainfall" required>
+
+                <button type="submit">Predict Crop</button>
+            </form>
+        </div>
+
+        <!-- Ideal Conditions Form -->
+        <div class="section">
+            <h2>🌍 Check Ideal Conditions</h2>
+            <form method="POST" action="/crop/ideal_conditions">
+                <label for="crop_name">Enter Crop Name:</label>
+                <input type="text" name="crop_name" placeholder="e.g. rice, maize, mango" required>
+                <button type="submit">Get Ideal Conditions</button>
+            </form>
+        </div>
+
+        <!-- Fertilizer Calculator -->
+        <div class="section">
+            <h2>🧪 Fertilizer Requirement Calculator</h2>
+            <form method="POST" action="/crop/fertilizer_calc">
+                <label for="crop_name">Crop Name:</label>
+                <input type="text" name="crop_name" placeholder="e.g. wheat, rice" required>
+
+                <label for="land_area">Land Area (in hectares):</label>
+                <input type="text" name="land_area" placeholder="e.g. 2" required>
+
+                <label for="N">Current Nitrogen (N):</label>
+                <input type="text" name="N" required>
+
+                <label for="P">Current Phosphorus (P):</label>
+                <input type="text" name="P" required>
+
+                <label for="K">Current Potassium (K):</label>
+                <input type="text" name="K" required>
+
+                <label for="ph">Current Soil pH:</label>
+                <input type="text" name="ph" required>
+
+                <button type="submit">Calculate Fertilizer</button>
+            </form>
+        </div>
+
+        <!-- Display Results -->
+        {% if prediction_text %}
+        <div class="result">
+            {{ prediction_text | safe }}
+        </div>
+        {% endif %}
+
+        {% if ideal_conditions_text %}
+        <div class="result">
+            {{ ideal_conditions_text | safe }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

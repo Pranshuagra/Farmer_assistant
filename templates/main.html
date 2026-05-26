@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+  <span class="card-icon" aria-hidden="true" role="presentation">🌤️</span>
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="A smart assistant for farmers with tools like weather forecasts, market price updates, and fertilizer calculators.">
+<meta name="keywords" content="Farming, Agriculture, Farmer Assistant, Weather, Crop Info, Fertilizer Calculator, Market Prices">
+<meta name="author" content="Your Name or Team Name">
+<title>Farmer Assistant App</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  :root {
+    --color-bg: #ffffff;
+    --color-primary: #111827; /* dark gray */
+    --color-secondary: #6b7280; /* neutral gray */
+    --color-accent: #22c55e; /* green */
+    --color-shadow: rgba(0,0,0,0.05);
+    --radius: 0.75rem;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-secondary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--color-bg);
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 100;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    cursor: default;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    color: var(--color-secondary);
+    font-weight: 600;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: var(--color-accent);
+  }
+
+  main {
+    padding-top: 4rem;
+  }
+
+  .hero {
+    padding: 8rem 1rem 6rem;
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  .hero h1 {
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+
+  .hero p {
+    font-weight: 400;
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    color: var(--color-secondary);
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px var(--color-shadow);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: var(--color-accent);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  .features {
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: #f9fafb;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px var(--color-shadow);
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-primary);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 320px;
+  }
+
+  .card:hover,
+  .card:focus-within {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(34,85,58,0.2);
+    outline: none;
+  }
+
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-accent);
+  }
+
+  .card h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .card p {
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-secondary);
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  /* Fertilizer Calculator Inputs */
+  .calculator {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .calculator label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+
+  .calculator input[type=number] {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.2s ease;
+  }
+
+  .calculator input[type=number]:focus {
+    border-color: var(--color-accent);
+    outline: none;
+  }
+
+  .result {
+    margin-top: 0.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: center;
+    font-size: 1.125rem;
+  }
+#schemes, #playlists {
+  margin-bottom: 60px;
+}
+
+/* Grid layout for schemes and playlists */
+#schemes, #playlists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+/* Card styling */
+.scheme, .playlist {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 2px solid #c8e6c9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.scheme:hover, .playlist:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.scheme h2, .playlist h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
+
+.scheme p, .playlist p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.scheme a,.playlist a {
+  color: #00796b;
+  text-decoration: none;
+}
+
+.scheme a:hover, .playlist a:hover {
+  text-decoration: underline;
+}
+h1.schemes,h1.playlists {
+  text-align: center;
+  color: #2e7d32;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+.modal {
+      display: none; 
+      position: fixed; 
+      z-index: 1000; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; 
+      background-color: rgba(0, 0, 0, 0.4); 
+    }
+
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto; 
+      padding: 20px;
+      border: 1px solid #888;
+      width: 90%;
+      max-width: 600px;
+      height: 600px;
+      position: relative;
+    }
+
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #chatbot-container {
+      width: 100%;
+      height: 90%;
+      position: relative;
+    }
+
+    .need-help-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      z-index: 999;
+    }
+  /* Footer */
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    padding: 2rem 1rem;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  /* Responsive text sizes */
+  @media (min-width: 768px) {
+    .hero h1 {
+      font-size: 4.5rem;
+    }
+    .hero p {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav aria-label="Primary Navigation">
+      <div class="logo" aria-label="Farmer Assistant App logo" tabindex="0">Farmer Assistant</div>
+      <div class="nav-links">
+        <a href="#features" tabindex="0">Features</a>
+        <a href="#schemes" tabindex="0">Govt. Yojna</a>
+
+        <a href="#playlists" tabindex="0">Agriculture Playlist</a>
+      </div>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" role="banner">
+    <h1>Your Smart Farmer Assistant</h1>
+    <p>Accurate weather, crop tips, market prices, and handy tools to boost your farming experience.</p>
+    <button class="btn-primary" onclick="scrollToFeatures()">Get Started</button>
+    <!-- Button fix — HTML mein ye likho -->
+<div style="display: flex; gap: 16px; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 24px;">
+  
+
+
+  <button onclick="startAssistant()" id="speakBtn"
+    style="background: #0f172a; color: white; border: none; border-radius: 12px;
+           padding: 16px 32px; font-size: 17px; font-weight: 700;
+           cursor: pointer; letter-spacing: 0.3px; display: flex; align-items: center; gap: 8px;">
+    🎤 Speak Command
+  </button>
+
+</div>
+
+<p id="assistantStatus"
+   style="text-align: center; margin-top: 10px; font-size: 14px; color: #6b7280;">
+  Assistant inactive
+</p>
+  </section>
+
+  <section id="features" class="features" aria-label="Features">
+    <article class="card" tabindex="0" aria-labelledby="weather-title" role="region">
+      <div class="card-icon" aria-hidden="true">🌤️</div>
+      <h3 id="weather-title">Real-time Weather</h3>
+      <p>Check the current weather in your area to plan farming activities efficiently.</p>
+  <a href="/weather" class="btn-primary" style="text-decoration: none;">
+    <button class="btn-primary">Check weather</button>
+  </a>
+    </article>
+    <article class="card" tabindex="0" aria-labelledby="crop-title" role="region">
+  <div class="card-icon" aria-hidden="true">🌱</div>
+  <h3 id="crop-title">Crop Recommendation System</h3>
+  <p>Get details about crops, their growing conditions, and best practices for yield improvement.</p>
+  <!-- Update the link to direct to the /crop route -->
+  <a href="/crop" class="btn-primary" style="text-decoration: none;">
+    <button class="btn-primary">Check crop</button>
+  </a>
+</article>
+
+<article class="card" tabindex="0" aria-labelledby="weather-title" role="region">
+  <div class="card-icon" aria-hidden="true">
+    <img src="https://cdn-icons-png.freepik.com/256/3913/3913469.png?ga=GA1.1.132924955.1704264451&semt=ais_hybrid" alt="Plant Disease Icon" width="60" height="60">
+  </div>
+
+  <h3 id="-title">Plant Disease Recognition</h3>
+  <p>Uses image recognition technology to detect plant diseases early. Farmers can upload images of affected crops and receive instant diagnosis.</p>
+  <!-- Update the button to link to the disease detection page -->
+  <a href="/disease" class="btn-primary" style="text-decoration: none;">
+    <button class="btn-primary">Check Disease</button>
+  </a>
+</article>
+
+    <article class="card" tabindex="0" aria-labelledby="market-title" role="region">
+      <div class="card-icon" aria-hidden="true">💰</div>
+      <h3 id="market-title">Market Prices</h3>
+      <p>Stay updated with the current market prices of common crops to make informed selling decisions.</p>
+  <a href="/prices" class="btn-primary" style="text-decoration: none;">
+    <button class="btn-primary">Check Price</button>
+  </a>
+    </article>
+
+  </section>
+  <h1 class = 'schemes'>Current Government Agriculture Schemes in India</h1>
+  <section id = 'schemes'>
+
+    <div class="scheme">
+        <h2>1. Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)</h2>
+        <p>Provides ₹6,000/year in three installments to eligible farmers to support their income.</p>
+        <p><a href="https://pmkisan.gov.in" target="_blank">https://pmkisan.gov.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>2. Pradhan Mantri Fasal Bima Yojana (PMFBY)</h2>
+        <p>Offers low-cost crop insurance to farmers to protect against crop loss due to natural disasters.</p>
+        <p><a href="https://pmfby.gov.in" target="_blank">https://pmfby.gov.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>3. Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)</h2>
+        <p>Aims to expand irrigation coverage and improve water use efficiency in agriculture.</p>
+        <p><a href="https://pmksy.gov.in" target="_blank">https://pmksy.gov.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>4. Soil Health Card Scheme</h2>
+        <p>Distributes soil health cards to farmers with information on soil nutrients and fertilizer use.</p>
+        <p><a href="https://soilhealth.dac.gov.in" target="_blank">https://soilhealth.dac.gov.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>5. Kisan Credit Card (KCC)</h2>
+        <p>Offers short-term loans to farmers for agricultural and allied activities at subsidized rates.</p>
+        <p><a href="https://www.pmkisan.gov.in/Documents/KCC.pdf" target="_blank">KCC Info (PDF)</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>6. National Agriculture Market (eNAM)</h2>
+        <p>A digital trading platform for agricultural commodities to ensure better price discovery for farmers.</p>
+        <p><a href="https://enam.gov.in" target="_blank">https://enam.gov.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>7. Paramparagat Krishi Vikas Yojana (PKVY)</h2>
+        <p>Promotes organic farming through group-based training, certification, and marketing support.</p>
+        <p><a href="https://www.pgsindia-ncof.gov.in" target="_blank">https://www.pgsindia-ncof.gov.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>8. Mission for Integrated Development of Horticulture (MIDH)</h2>
+        <p>Supports production and post-harvest management of horticulture crops like fruits and vegetables.</p>
+        <p><a href="https://midh.gov.in" target="_blank">https://midh.gov.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>9. Rashtriya Krishi Vikas Yojana – RAFTAAR</h2>
+        <p>Focuses on agricultural development, innovation, and entrepreneurship through state-led initiatives.</p>
+        <p><a href="https://rkvy.nic.in" target="_blank">https://rkvy.nic.in</a></p>
+    </div>
+
+    <div class="scheme">
+        <h2>10. Agriculture Infrastructure Fund (AIF)</h2>
+        <p>Provides ₹1 lakh crore financing support for farm-gate infrastructure like cold storage and warehouses.</p>
+        <p><a href="https://agriinfra.dac.gov.in" target="_blank">https://agriinfra.dac.gov.in</a></p>
+    </div>
+  </section>
+  <h1 class = 'playlists'>YouTube Playlists on Agriculture & Farming</h1>
+  <section id = 'playlists'>
+
+  <div class="playlist">
+    <h2>Farming Playlist</h2>
+    <p>A collection of vlogs covering farming, agriculture, permaculture, gardening, and animal husbandry.</p>
+    <p><a href="https://www.youtube.com/playlist?list=PLIZKRmucNttsj8ewEKs9CKxOUeDXzgG3C3C" target="_blank">Watch on YouTube</a></p>
+  </div>
+
+  <div class="playlist">
+    <h2>Farming and Agriculture videos</h2>
+    <p>Videos about farms, farming equipment, agricultural history, and crop production in rural America.</p>
+    <p><a href="https://www.youtube.com/playlist?list=PL5BB541F86A327E14" target="_blank">Watch on YouTube</a></p>
+  </div>
+
+  <div class="playlist">
+    <h2>Agriculture & Farming.</h2>
+    <p>Includes farm tours (e.g., Marilissa Farms, Trinidad & Tobago), ruminant farming and breadfruit discussions.</p>
+    <p><a href="https://www.youtube.com/playlist?list=PL2Qz2fxkTvYLSsKLG8BqWjnzYZjHvFeiJ" target="_blank">Watch on YouTube</a></p>
+  </div>
+
+  <div class="playlist">
+    <h2>Agriculture and Food</h2>
+    <p>Explores how agriculture supports food security, livelihoods, and rural development worldwide.</p>
+    <p><a href="https://www.youtube.com/playlist?list=PLopq6yGfmFAtRWTFWaX46sfusrL84e5fx" target="_blank">Watch on YouTube</a></p>
+  </div>
+
+  <div class="playlist">
+    <h2>Ag Around the World (Farm Journal)</h2>
+    <p>Reports from around the world: efforts to control pests like screwworm, and major crop events in Mexico, etc.</p>
+    <p><a href="https://www.youtube.com/playlist?list=PLvTM5d7T5l6kguHD52dYBp9P1maZyZXI1" target="_blank">Watch on YouTube</a></p>
+  </div>
+  </section>
+  <section id="faq" class="features" aria-label="Farming Tips and FAQs">
+    <article class="card" tabindex="0" role="region">
+      <h3>Common Farming Tips</h3>
+      <ul>
+        <li>Test soil regularly to optimize fertilizer usage.</li>
+        <li>Plant crop varieties suitable for your climate.</li>
+        <li>Use crop rotation to maintain soil health.</li>
+        <li>Monitor weather forecasts before irrigation or spraying.</li>
+        <li>Keep farm equipment well-maintained for efficiency.</li>
+      </ul>
+    </article>
+  </section>
+  <section id = 'chatbot'>  
+    <h1>Welcome to the Farmer Assistant Website</h1>
+  <p>Click the "Need Help?" button for chatbot support.</p>
+
+  <!-- Need Help Button -->
+  <button class="need-help-btn" onclick="openModal()">Need Help?</button>
+
+  <!-- Modal -->
+  <div id="chatModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>Chat with our Assistant</h2>
+      <div id="chatbot-container"></div>
+    </div>
+  </div></section>
+</main>
+<footer>
+  &copy; 2024 Farmer Assistant App. All rights reserved.
+</footer>
+<script>
+  function openModal() {
+    document.getElementById("chatModal").style.display = "block";
+    if (!window.chatbotLoaded) {
+      window.watsonAssistantChatOptions = {
+        integrationID: "f62d9bb8-2f7a-4cc8-a190-d624c792dbc0", // Your updated integration ID
+        region: "au-syd", // Your updated region
+        serviceInstanceID: "7d44a677-b330-4181-97b3-67ed5bc92755", // Your updated service instance ID
+        element: document.getElementById("chatbot-container"),
+        showLauncher: false,
+        openChatByDefault: true,
+        onLoad: async (instance) => {
+          await instance.render();
+        }
+      };
+      const t = document.createElement('script');
+      t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+              "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+      window.chatbotLoaded = true;
+    }
+  }
+
+  function closeModal() {
+    document.getElementById("chatModal").style.display = "none";
+  }
+
+  function scrollToFeatures() {
+    const featuresSection = document.getElementById('features');
+    if (featuresSection) {
+      featuresSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function calculateFertilizer(event) {
+    event.preventDefault();
+    const fieldSizeInput = document.getElementById('field-size');
+    const resultDiv = document.getElementById('result');
+
+    const fieldSize = parseFloat(fieldSizeInput.value);
+    if (isNaN(fieldSize) || fieldSize < 0) {
+      resultDiv.textContent = 'Please enter a valid positive number for field size.';
+      return false;
+    }
+
+    const fertilizerAmount = (fieldSize * 50).toFixed(2);
+    resultDiv.textContent = `Recommended fertilizer amount: ${fertilizerAmount} kg`;
+    return false;
+  }
+</script>
+<script>
+let recognition = null;
+let isActivated = false;
+let currentLang = "en";
+let lastCommand = "";         // ✅ repeat rokne ke liye
+let lastCommandTime = 0;      // ✅ timestamp guard
+
+const responses = {
+    activate: {
+        en: "Yes boss! I am listening. Tell me what you need.",
+        hi: "हाँ बॉस! मैं सुन रहा हूँ। बताइए क्या चाहिए।"
+    },
+    disease: {
+        en: "Sure! Opening the disease page for you...",
+        hi: "हाँ! अभी बीमारी का पेज खोल रहा हूँ..."
+    },
+    crop: {
+        en: "Great! Opening crop recommendation for you...",
+        hi: "बढ़िया! फसल सुझाव खोल रहा हूँ..."
+    },
+    weather: {
+        en: "Sure! Fetching today's weather for you...",
+        hi: "ज़रूर! आज का मौसम देख रहा हूँ..."
+    },
+    price: {
+        en: "Got it! Opening market prices for you...",
+        hi: "समझ गया! मंडी भाव दिखा रहा हूँ..."
+    },
+    scheme: {
+        en: "Sure! Showing all government schemes...",
+        hi: "बिल्कुल! सरकारी योजनाएँ दिखा रहा हूँ..."
+    },
+    video: {
+        en: "Okay! Loading farming videos for you...",
+        hi: "ठीक है! खेती के वीडियो खोल रहा हूँ..."
+    },
+    stop: {
+        en: "Okay! Going to sleep. Say Shiva to wake me again!",
+        hi: "ठीक है! सो रहा हूँ। दोबारा Shiva बोलकर जगाएं!"
+    },
+    unknown: {
+        en: "Hmm, I did not catch that. Please say again?",
+        hi: "हम्म, समझ नहीं आया। दोबारा बोलें?"
+    }
+};
+
+function speak(text, lang = "en") {
+    window.speechSynthesis.cancel();
+    const s   = new SpeechSynthesisUtterance(text);
+    s.lang    = lang === "hi" ? "hi-IN" : "en-IN";
+    s.rate    = 0.92;
+    s.pitch   = 1.05;
+    window.speechSynthesis.speak(s);
+    return s;
+}
+
+function say(key) {
+    const lang = currentLang;
+    const text = responses[key]?.[lang] || responses[key]?.["en"];
+    setStatus("🔊 " + text);
+    speak(text, lang);
+}
+
+function sayAndGo(key, url) {
+    const lang = currentLang;
+    const text = responses[key]?.[lang] || responses[key]?.["en"];
+    setStatus("🔊 " + text);
+    window.speechSynthesis.cancel();
+    const s   = new SpeechSynthesisUtterance(text);
+    s.lang    = lang === "hi" ? "hi-IN" : "en-IN";
+    s.rate    = 0.92;
+    s.pitch   = 1.05;
+    s.onend   = () => window.location.href = url;
+    window.speechSynthesis.speak(s);
+}
+
+function sayAndScroll(key, elementId) {
+    const lang = currentLang;
+    const text = responses[key]?.[lang] || responses[key]?.["en"];
+    setStatus("🔊 " + text);
+    window.speechSynthesis.cancel();
+    const s   = new SpeechSynthesisUtterance(text);
+    s.lang    = lang === "hi" ? "hi-IN" : "en-IN";
+    s.rate    = 0.92;
+    s.pitch   = 1.05;
+    s.onend   = () => {
+        const el = document.getElementById(elementId);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
+    };
+    window.speechSynthesis.speak(s);
+}
+
+function setStatus(msg, active = null) {
+    const el  = document.getElementById("assistantStatus");
+    const btn = document.getElementById("speakBtn");
+    if (el) el.innerText = msg;
+    if (btn && active !== null) {
+        btn.style.background = active ? "#166534" : "#0f172a";
+        btn.innerHTML        = active ? "🛑 Stop" : "🎤 Speak Command";
+    }
+}
+
+function detectLang(text) {
+    return /[\u0900-\u097F]/.test(text) ? "hi" : "en";
+}
+
+// ✅ Repeat guard — same command 3 sec ke andar dobara nahi chalega
+function isDuplicate(command) {
+    const now = Date.now();
+    if (command === lastCommand && (now - lastCommandTime) < 3000) {
+        return true;
+    }
+    lastCommand     = command;
+    lastCommandTime = now;
+    return false;
+}
+
+function handleCommand(command) {
+    if (isDuplicate(command)) return; // ✅ repeat roko
+
+    currentLang = detectLang(command);
+
+    // 🌱 Disease
+    if (
+        command.includes("disease")   ||
+        command.includes("diseas")    ||   // mishear fix
+        command.includes("बीमारी")    ||
+        command.includes("रोग")       ||
+        command.includes("pest")
+    ) {
+        sayAndGo("disease", "/disease");
+
+    // 🌾 Crop
+    } else if (
+        command.includes("crop")       ||
+        command.includes("crops")      ||
+        command.includes("क्रॉप")      ||
+        command.includes("फसल")        ||
+        command.includes("खेती")       ||
+        command.includes("recommend")
+    ) {
+        sayAndGo("crop", "/crop");
+
+    // 🌦 Weather
+    } else if (
+        command.includes("weather")    ||
+        command.includes("weatha")     ||   // mishear fix
+        command.includes("मौसम")       ||
+        command.includes("बारिश")      ||
+        command.includes("तापमान")
+    ) {
+        sayAndGo("weather", "/weather");
+
+    // 💰 Price
+    } else if (
+        command.includes("price")      ||
+        command.includes("prices")     ||
+        command.includes("भाव")        ||
+        command.includes("दाम")        ||
+        command.includes("मंडी")       ||
+        command.includes("market")
+    ) {
+        sayAndGo("price", "/prices");
+
+    // 🏛 Scheme
+    } else if (
+        command.includes("scheme")     ||
+        command.includes("yojna")      ||
+        command.includes("योजना")      ||
+        command.includes("government") ||
+        command.includes("सरकार")
+    ) {
+        sayAndScroll("scheme", "schemes");
+
+    // 🎥 Video
+    } else if (
+        command.includes("video")      ||
+        command.includes("videos")     ||
+        command.includes("playlist")   ||
+        command.includes("वीडियो")
+    ) {
+        sayAndScroll("video", "playlists");
+
+    // 🛑 Stop
+    } else if (
+        command.includes("stop")       ||
+        command.includes("बंद")        ||
+        command.includes("रुको")       ||
+        command.includes("sleep")
+    ) {
+        isActivated = false;
+        say("stop");
+        setTimeout(() => {
+            if (recognition) { recognition.stop(); recognition = null; }
+            setStatus("😴 Assistant soye hue hain। Click karein dobara।", false);
+        }, 1800);
+
+    } else {
+        say("unknown");
+    }
+}
+
+function startAssistant() {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { alert("Chrome use karein!"); return; }
+
+    // Already running — stop
+    if (recognition) {
+        recognition.stop();
+        recognition = null;
+        isActivated = false;
+        setStatus("❌ Assistant band kar diya।", false);
+        return;
+    }
+
+    recognition                = new SR();
+    recognition.continuous     = true;
+    recognition.interimResults = true;
+
+    // ✅ KEY FIX — dono langs ke liye alag alag try karo
+    // Chrome mein "en-IN" English + some Hindi pakad leta hai
+    // "hi-IN" Hindi + Hinglish pakad leta hai
+    // Best combination: pehle hi-IN try karo
+    recognition.lang = "hi-IN";
+
+    recognition.onstart = () => {
+        setStatus("🎤 Sun raha hoon... 'Shiva' bolkar activate karein", true);
+    };
+
+    recognition.onresult = function (event) {
+        let interim = "";
+        let final   = "";
+
+        for (let i = event.resultIndex; i < event.results.length; i++) {
+            const t = event.results[i][0].transcript.toLowerCase().trim();
+            if (event.results[i].isFinal) final   += t;
+            else                          interim  += t;
+        }
+
+        const command = final || interim;
+        if (!command) return;
+
+        // Wake word — interim mein bhi check
+        if (!isActivated) {
+            if (
+                command.includes("shiva") ||
+                command.includes("शिवा") ||
+                command.includes("शिव")
+            ) {
+                isActivated = true;
+                currentLang = detectLang(command);
+                lastCommand = "shiva"; // activate repeat na ho
+                lastCommandTime = Date.now();
+                say("activate");
+                setStatus("✅ Active! Command bolo...", true);
+            } else {
+                setStatus("🎤 Pehle 'Shiva' bolen | Say 'Shiva' first");
+            }
+            return;
+        }
+
+        // Interim mein sirf preview
+        if (!event.results[event.results.length - 1].isFinal) {
+            setStatus("🎙️ Sun raha hoon: " + command);
+            return;
+        }
+
+        // ✅ Final result — command handle karo
+        handleCommand(command);
+    };
+
+    recognition.onerror = function (event) {
+        if (event.error === "not-allowed") {
+            alert("❌ Microphone blocked!\n\nTerminal mein chalao:\npython -m http.server 5000\n\nChrome mein kholo:\nhttp://localhost:5000");
+            recognition = null;
+            setStatus("❌ Mic permission denied", false);
+        } else if (event.error === "no-speech") {
+            setStatus("🎤 Awaaz nahi aayi, sun raha hoon...");
+        } else {
+            console.log("Error:", event.error);
+        }
+    };
+
+    recognition.onend = function () {
+        if (recognition) {
+            try { recognition.start(); }
+            catch (e) { console.log("Restart:", e); }
+        }
+    };
+
+    recognition.start();
+    setTimeout(() => {
+        speak("Shiva बोलकर मुझे जगाएं। Say Shiva to activate.", "hi");
+    }, 400);
+}
+</script>
+</body>
+</html>
+

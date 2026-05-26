@@ -1,0 +1,113 @@
+{
+  "Bacterialblight": {
+    "description": "Bacterial leaf blight in rice causes water-soaked streaks on leaves that turn yellow or white, starting from the tips and margins. It can lead to severe wilting and yield loss, a condition known as 'kresek'.",
+    "cause": "Caused by the bacterium Xanthomonas oryzae pv. oryzae.",
+    "treatment": [
+      "Spray copper-based bactericides (e.g., copper hydroxide) in the early stages of infection.",
+      "Apply antibiotics like streptocycline, but only under expert guidance as resistance can be an issue.",
+      "Ensure proper drainage in the field to reduce bacterial spread."
+    ],
+    "prevention": [
+      "The most effective method is using resistant rice varieties (e.g., IR20, IR64).",
+      "Maintain field sanitation by removing and destroying infected crop residues and weeds.",
+      "Avoid over-irrigation and ensure fields are not continuously flooded."
+    ],
+    "fertilizer_recommendation": [
+      "Apply a balanced fertilization with 100–120 kg Nitrogen, 60–80 kg Phosphorus, and 40–60 kg Potassium per hectare.",
+      "Avoid excessive nitrogen, as it promotes lush growth that is more susceptible to the bacterium."
+    ],
+    "soil_recommendation": [
+      "Grows best in well-drained clay loam soils.",
+      "Maintain a soil pH between 5.5 and 7.0.",
+      "Practice crop rotation with non-host crops to reduce bacterial inoculum in the soil."
+    ]
+  },
+  "Blast": {
+    "description": "Rice blast is a major fungal disease affecting all parts of the plant. On leaves (Leaf Blast), it causes diamond-shaped lesions with grayish centers and brown borders. On the panicle neck (Neck Blast), it causes the neck to rot, leading to unfilled grains and panicle breakage.",
+    "cause": "Fungus Magnaporthe oryzae (also known as Pyricularia oryzae).",
+    "treatment": [
+      "Apply systemic fungicides like tricyclazole, isoprothiolane, or azoxystrobin.",
+      "For leaf blast, spray at the first sign of lesions. For neck blast, a preventive spray at the booting or panicle initiation stage is critical."
+    ],
+    "prevention": [
+      "Use blast-resistant rice varieties; this is the most economical and effective control method.",
+      "Manage nitrogen fertilizer carefully; avoid excessive application which favors the disease.",
+      "Maintain proper water levels (avoid drought stress) and ensure good air circulation through appropriate plant spacing."
+    ],
+    "fertilizer_recommendation": [
+      "Apply 100–120 kg Nitrogen, 60–80 kg Phosphorus, and 40–60 kg Potassium per hectare.",
+      "Split nitrogen application and avoid heavy doses at tillering and panicle initiation stages."
+    ],
+    "soil_recommendation": [
+      "Well-drained clay loam soils are preferred.",
+      "Maintain a soil pH between 5.5 and 7.0.",
+      "Silicon soil amendments can increase plant resistance to blast."
+    ]
+  },
+  "Brownspot": {
+    "description": "Brown spot appears as small, circular to oval brown lesions with yellow halos on leaves, leaf sheaths, and glumes. It reduces photosynthesis, weakens the plant, and affects grain quality and weight.",
+    "cause": "Fungus Bipolaris oryzae (previously known as Helminthosporium oryzae).",
+    "treatment": [
+      "Spray protective fungicides such as mancozeb, or systemic ones like propiconazole or carbendazim.",
+      "Seed treatment with fungicides can reduce initial infection."
+    ],
+    "prevention": [
+      "Use certified, disease-free seeds.",
+      "Improve soil fertility, as the disease is more severe in nutrient-deficient soils.",
+      "Avoid water stress (drought) conditions, which make the plant more susceptible."
+    ],
+    "fertilizer_recommendation": [
+      "Apply a balanced dose of 80–100 kg Nitrogen, 60–80 kg Phosphorus, and 40–60 kg Potassium per hectare.",
+      "Ensure adequate potassium and silicon, as deficiencies of these nutrients increase brown spot severity."
+    ],
+    "soil_recommendation": [
+      "The disease thrives in nutrient-poor soils. Ensure well-drained soils with good organic matter.",
+      "Maintain soil pH between 5.5 and 7.0.",
+      "Correct any micronutrient deficiencies, particularly manganese and zinc."
+    ]
+  },
+  "Healthy": {
+    "description": "Healthy rice plants are characterized by vigorous growth, lush green leaves, strong upright stems (culms), and the development of full, heavy panicles without any spots, lesions, or signs of stress.",
+    "cause": "No infection or significant stress is present.",
+    "treatment": [
+      "Maintain optimal growing conditions through recommended irrigation and fertilizer schedules.",
+      "Conduct regular monitoring (scouting) of the crop to detect any early signs of disease or pest problems."
+    ],
+    "prevention": [
+      "Start with high-quality, certified, disease-resistant seeds.",
+      "Practice good field hygiene, including weed control and removal of old crop residue.",
+      "Implement crop rotation to break disease and pest cycles."
+    ],
+    "fertilizer_recommendation": [
+      "Apply a balanced NPK ratio of 100–120 kg Nitrogen, 60–80 kg Phosphorus, and 40–60 kg Potassium per hectare.",
+      "Split the nitrogen application into 3 doses (at planting, active tillering, and panicle initiation) for efficient uptake."
+    ],
+    "soil_recommendation": [
+      "Rice thrives in clay loam to loam soils that have good water retention capacity.",
+      "Maintain soil pH in the range of 5.5 to 7.0.",
+      "Ensure proper field leveling for uniform water distribution and nutrient availability."
+    ]
+  },
+  "Tungro": {
+    "description": "Tungro is a viral disease that causes stunting, reduced tillering, and yellow to orange-yellow discoloration of leaves, starting from the tip. Infected plants produce sterile or partially filled grains, leading to significant yield loss.",
+    "cause": "Joint infection of two viruses: Rice tungro bacilliform virus (RTBV) and Rice tungro spherical virus (RTSV). It is transmitted by the green leafhopper insect.",
+    "treatment": [
+      "There is no cure for the virus once a plant is infected. Control is focused on the insect vector.",
+      "Spray systemic insecticides like imidacloprid or thiamethoxam to control the green leafhopper population.",
+      "Immediately remove and destroy infected plants (roguing) to prevent further spread."
+    ],
+    "prevention": [
+      "Planting tungro-resistant rice varieties is the most effective prevention strategy.",
+      "Adjust planting dates to avoid periods of high leafhopper activity.",
+      "Practice a fallow period (a month without a rice crop) to break the disease cycle."
+    ],
+    "fertilizer_recommendation": [
+      "Apply a balanced NPK dose to maintain overall plant health and vigor, which can help plants better tolerate stress.",
+      "Fertilizer will not prevent or cure the disease."
+    ],
+    "soil_recommendation": [
+      "Standard soil management practices for rice apply.",
+      "Good soil health and fertility support a more resilient crop that can better withstand vector feeding."
+    ]
+  }
+}

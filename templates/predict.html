@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ crop }} Prediction Result{% endblock %}
+
+{% block content %}
+  <h1>🌱 {{ crop }} Disease Detection Result</h1>
+
+  {% if uploaded_image %}
+    <img src="{{ uploaded_image }}" alt="Uploaded Leaf" class="preview">
+  {% endif %}
+
+  {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    <p><strong>Confidence:</strong> {{ confidence }}</p>
+
+    {% if disease_info %}
+      <h3>Disease Information</h3>
+      <p><strong>Description:</strong> {{ disease_info.description }}</p>
+      <p><strong>Cause:</strong> {{ disease_info.cause }}</p>
+      <p><strong>Treatment:</strong></p>
+      <ul>
+        {% for step in disease_info.treatment %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ul>
+      <p><strong>Prevention:</strong></p>
+      <ul>
+        {% for step in disease_info.prevention %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% else %}
+    <p>No prediction yet. Please upload a leaf image.</p>
+  {% endif %}
+
+  <a href="{{ url_for('index') }}">🔄 Try Again</a>
+{% endblock %}
